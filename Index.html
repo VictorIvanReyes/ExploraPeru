@@ -1,0 +1,419 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explora el Mundo - Turismo</title>
+  <link rel="shortcut icon" href="/build/logo (2).png " type="image/x-icon">
+  <link rel="stylesheet" href="/css/Destino2.css">
+  <link rel="stylesheet" href="/css/destinos.css">
+  <!-- ① CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+<!-- …pon tu CSS propio después para que puedas sobre-escribir… -->
+
+</head>
+<body>
+  <nav class="navbar">
+    
+      <!-- Botón hamburguesa -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Enlaces -->
+      <div class="nav-links">
+        <div class="Nombre"> 
+          <p><b>Explora Perú </b></p>
+        </div>
+        <div class="Enlaces">
+          <a href="#">Inicio</a>
+          <a href="Departamentos.html">Departamentos</a>
+          <a href="/Nosotros.html">Nosotros</a>
+          <a href="Contactanos.html">Contáctanos</a>
+          <a href="/cart.html" class="cart-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path d="M1.75 1.002a.75.75 0 1 0 0 1.5h1.835l1.24 5.113A3.752 3.752 0 0 0 2 11.25c0 .414.336.75.75.75h10.5a.75.75 0 0 0 0-1.5H3.628A2.25 2.25 0 0 1 5.75 9h6.5a.75.75 0 0 0 .73-.578l.846-3.595a.75.75 0 0 0-.578-.906 44.118 44.118 0 0 0-7.996-.91l-.348-1.436a.75.75 0 0 0-.73-.573H1.75ZM5 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+          </svg>
+        </a>
+        </div>
+      </div>
+  </nav>
+  <div class="Manto">
+    <h5><strong>Explora el Perú</strong></h5>
+    <h2>Descubre los destinos mas increibles de nuestro país</h2>
+    <div class="search-container">
+      <input id="searchInput"       
+            type="text"
+            placeholder="Buscar destinos"
+            class="search-input">
+      <button id="searchBtn" class="search-button">🔍</button>
+    </div>
+  </div>
+  <p id="noResults" style="display:none;text-align:center;margin-top:1rem">
+    No se encontraron destinos…
+  </p>
+  <section id="searchResults" class="search-results" style="display:none;"></section>
+  <section class="Cuerpo ">
+    <!-- ====================  CARRUSEL · Busqueda  ==================== -->
+
+    <!-- Carrusel dinámico de resultados -->
+    <section id="searchResultsSwiper"
+            class="destinos-carousel swiper search-swiper"
+            style="display:none;">           <!-- oculto por defecto -->
+      <h1 class="titulo-zona">Resultados</h1>
+
+      <div class="swiper-wrapper" id="searchResultsWrapper"></div>
+
+      <div class="swiper-button-prev search-prev"></div>
+      <div class="swiper-button-next search-next"></div>
+      <div class="swiper-pagination  search-pagination"></div>
+    </section>
+
+    <!-- ====================  CARRUSEL · SIERRA  ==================== -->
+
+    <section class="destinos-carousel swiper sierra-carousel">
+      <h1 class="titulo-zona">Sierra</h1>
+  
+      <div class="swiper-wrapper">
+        <!-- 1 ▸ Machu Picchu -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/CUSCO.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/pexels-alexazabache-3879062.jpg" alt="Machu Picchu">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Cusco</p>
+              <h4 class="case-title">Machu Picchu</h4>
+              <p class="case-text">Ciudadela inca sobre las montañas del Urubamba.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 2 ▸ Vinicunca -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/CUSCO.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Montaña7Colores.jpg" alt="Montaña de 7 Colores">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Cusco</p>
+              <h4 class="case-title">Vinicunca</h4>
+              <p class="case-text">El famoso Cerro de los Siete Colores a 5 000 m s.n.m.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 3 ▸ Plaza Mayor de Cusco -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/CUSCO.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/PlazaCuzco.jpg" alt="Plaza Mayor de Cusco">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Cusco</p>
+              <h4 class="case-title">Plaza Mayor de Cusco</h4>
+              <p class="case-text">Centro histórico y cultural de la capital inca.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 4 ▸ Laguna Humantay -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/CUSCO.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Humantay.jpg" alt="Laguna Humantay">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Cusco</p>
+              <h4 class="case-title">Laguna Humantay</h4>
+              <p class="case-text">Espejo turquesa a 4 200 m en la ruta al Salkantay.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 5 ▸ Cordillera Blanca -->
+        <div class="swiper-slide">
+          <a href="Departamentos/ANCASH.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/CordilleraBlanca.jpg" alt="Cordillera Blanca">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Áncash</p>
+              <h4 class="case-title">Cordillera Blanca</h4>
+              <p class="case-text">La cadena tropical más alta del planeta.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 6 ▸ Cañón del Colca -->
+        <div class="swiper-slide">
+          <a href="Departamentos/AREQUIPA.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Colca.jpg" alt="Cañón del Colca">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Arequipa</p>
+              <h4 class="case-title">Cañón del Colca</h4>
+              <p class="case-text">Mirador de cóndores y profundos abismos andinos.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="swiper-button-prev sierra-prev"></div>
+      <div class="swiper-button-next sierra-next"></div>
+      <div class="swiper-pagination sierra-pagination"></div>
+    </section>
+  
+    <!-- ====================  CARRUSEL · SELVA  ==================== -->
+    <section class="destinos-carousel swiper selva-carousel">
+      <h1 class="titulo-zona">Selva</h1>
+  
+      <div class="swiper-wrapper">
+        <!-- 1 ▸ Iquitos -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/LORETO.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Iquitos.jpg" alt="Iquitos">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Loreto</p>
+              <h4 class="case-title">Iquitos</h4>
+              <p class="case-text">Puerta de entrada al gran río Amazonas.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 2 ▸ Parque Nacional Manu -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/MADRE_DE_DIOS.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Manu.jpg" alt="Parque Nacional Manu">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Madre de Dios</p>
+              <h4 class="case-title">Parque Nacional Manu</h4>
+              <p class="case-text">Reservorio de biodiversidad único en el mundo.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 3 ▸ Catarata Gocta -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/AMAZONAS.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Gocta.jpg" alt="Catarata Gocta">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Amazonas</p>
+              <h4 class="case-title">Catarata Gocta</h4>
+              <p class="case-text">771 m de caída libre en pleno bosque nuboso.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 4 ▸ Catarata Ahuashiyacu -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/SAN_MARTIN.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Ahuashiyacu.jpg" alt="Catarata Ahuashiyacu">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">San Martín</p>
+              <h4 class="case-title">Catarata Ahuashiyacu</h4>
+              <p class="case-text">A solo 14 km de Tarapoto, rodeada de selva húmeda.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 5 ▸ Pacaya Samiria -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/LORETO.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/PacayaSamiria.jpg" alt="Pacaya Samiria">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Loreto</p>
+              <h4 class="case-title">Pacaya Samiria</h4>
+              <p class="case-text">La “Selva de los espejos” en pleno bajo Amazonas.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 6 ▸ Reserva Tambopata -->
+        <div class="swiper-slide">
+          <a href="Departamentos/MADRE_DE_DIOS.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Tambopata.jpg" alt="Reserva Tambopata">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Madre de Dios</p>
+              <h4 class="case-title">Reserva Tambopata</h4>
+              <p class="case-text">Clay licks y abundante vida silvestre amazónica.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="swiper-button-prev selva-prev"></div>
+      <div class="swiper-button-next selva-next"></div>
+      <div class="swiper-pagination selva-pagination"></div>
+    </section>
+  
+    <!-- ====================  CARRUSEL · COSTA  ==================== -->
+    <section class="destinos-carousel swiper costa-carousel">
+      <h1 class="titulo-zona">Costa</h1>
+  
+      <div class="swiper-wrapper">
+        <!-- 1 ▸ Chan-Chan -->
+        <div class="swiper-slide">
+          <a href="Departamentos/LA_LIBERTAD.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Chan_Chan.jpg" alt="Chan-Chan">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">La Libertad</p>
+              <h4 class="case-title">Chan-Chan</h4>
+              <p class="case-text">Capital del reino Chimú y ciudad de barro milenaria.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 2 ▸ Plaza Mayor de Lima -->
+        <div class="swiper-slide">
+          <a href="Departamentos/LIMA.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/PlazaLima.jpg" alt="Plaza Mayor de Lima">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Lima</p>
+              <h4 class="case-title">Plaza Mayor de Lima</h4>
+              <p class="case-text">Centro histórico y político de la capital.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 3 ▸ Parque del Amor -->
+        <div class="swiper-slide">
+          <a href="Departamentos/LIMA.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Paque_Amor.jpg" alt="Parque del Amor">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Lima</p>
+              <h4 class="case-title">Parque del Amor</h4>
+              <p class="case-text">Escultura “El Beso” con vista al Pacífico.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 4 ▸ Líneas de Nazca -->
+        <div class="swiper-slide">
+          <a href="/Departamentos/ICA.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/LineasNazca.jpg" alt="Líneas de Nazca">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Ica</p>
+              <h4 class="case-title">Líneas de Nazca</h4>
+              <p class="case-text">Enigmáticos geoglifos precolombinos en el desierto.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 5 ▸ Islas Ballestas -->
+        <div class="swiper-slide">
+          <a href="Departamentos/ICA.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Islas_Ballestas.jpg" alt="Islas Ballestas">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Ica</p>
+              <h4 class="case-title">Islas Ballestas</h4>
+              <p class="case-text">“Pequeño Galápagos” en la Reserva de Paracas.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+  
+        <!-- 6 ▸ Oasis de Huacachina -->
+        <div class="swiper-slide">
+          <a href="Departamentos/ICA.html" class="case-card">
+            <div class="case-image">
+              <img src="/assets/Destinos/Oasis_Huacachina.jpg" alt="Oasis de Huacachina">
+              <span class="case-overlay"></span>
+            </div>
+            <div class="case-content">
+              <p class="case-tag">Ica</p>
+              <h4 class="case-title">Oasis de Huacachina</h4>
+              <p class="case-text">Sandboarding entre las dunas del desierto costero.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div class="swiper-button-prev costa-prev"></div>
+      <div class="swiper-button-next costa-next"></div>
+      <div class="swiper-pagination costa-pagination"></div>
+    </section>
+  </section>
+
+
+   <section>
+    <h1><strong>Mapa Global de nuestro País</strong></h1>
+    <hr>
+    <!--Entramos a Google maps-->
+    <p><strong>Perú</strong></p>
+    <hr>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d64520331.133137815!2d-75.019505!3d-9.243538!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c850c05914f5%3A0xf29e011279210648!2zUGVyw7o!5e0!3m2!1ses-419!2spe!4v1748665322600!5m2!1ses-419!2spe" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </section>
+   
+   <footer>
+    <p>&copy; 2025 Explora el Mundo. Todos los derechos reservados.</p>
+  </footer>
+  <!-- ② JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/js/destinos.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/Buscador.js"></script>
+
+</body>
+   

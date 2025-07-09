@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cusco | Explora Perú</title>
+
+  <link rel="stylesheet" href="/css/globalDepar.css" />
+  <link rel="stylesheet" href="/css/Destino2.css">
+  <link rel="stylesheet" href="/css/ContenidoDepar.css">
+  <!-- Mapa CSS -->
+  <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body data-dpto="CUSCO">
+  <nav class="navbar">
+    
+      <!-- Botón hamburguesa -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Enlaces -->
+      <div class="nav-links">
+        <div class="Nombre"> 
+          <p><b>Explora Perú </b></p>
+        </div>
+        <div class="Enlaces">
+          <a href="/Index.html">Inicio</a>
+          <a href="/Departamentos.html">Departamentos</a>
+          <a href="/Nosotros.html">Nosotros</a>
+          <a href="/Contactanos.html">Contáctanos</a>
+          <a href="/cart.html" class="cart-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+             <path d="M1.75 1.002a.75.75 0 1 0 0 1.5h1.835l1.24 5.113A3.752 3.752 0 0 0 2 11.25c0 .414.336.75.75.75h10.5a.75.75 0 0 0 0-1.5H3.628A2.25 2.25 0 0 1 5.75 9h6.5a.75.75 0 0 0 .73-.578l.846-3.595a.75.75 0 0 0-.578-.906 44.118 44.118 0 0 0-7.996-.91l-.348-1.436a.75.75 0 0 0-.73-.573H1.75ZM5 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+  </nav>
+
+<!-- ╔════════════ BOTÓN PRINCIPAL ════════════ -->
+<button id="openReserve" class="btn-reserve">Reserva ya</button>
+
+<!-- ╔════════════ MODAL PLANIFICADOR ═════════╗ -->
+<dialog id="reserveModal" class="reserve-modal">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+    <!-- ───────── Indicador visual de pasos ───────── -->
+    <ol id="stepIndicator" class="step-indicator">
+    <li data-step="1" class="active">Personas&nbsp;+&nbsp;Itinerario</li>
+    <li data-step="2">Hospedaje</li>
+    <li data-step="3">Ciudad&nbsp;+&nbsp;Actividades</li>
+    </ol>
+    <article class="content" data-dept="Tacna">
+      <!-- Intro modal -->
+      <section class="intro">
+        <div class="intro-img"><img src="/assets/Destinos/tacna-hero.jpg" alt="Viñedos y desierto de Tacna"></div>
+        <div class="intro-text">
+          <h2>Tacna: Sol, Historia y Pisco</h2>
+          <p>Petroglifos, playas sureñas y gastronomía heroica.</p>
+        </div>
+      </section>
+      <div class="tarjeta-1">
+            <!-- Wizard -->
+            <section class="custom wizard">
+                <h2>Planifica tu Viaje</h2>
+                <!-- Paso 1 -->
+                <div class="step step-1">
+                <label class="field persons-field">
+                    <span class="lbl">1. Personas que viajan</span>
+                    <div class="stepper">
+                    <button type="button" class="stepper-btn" id="decP">–</button>
+                    <input type="number" id="numPersons" min="1" value="1" readonly>
+                    <button type="button" class="stepper-btn" id="incP">+</button>
+                    </div>
+                </label>
+                </div>
+        
+                <!-- Paso 2 -->
+                <div class="step step-2" >
+                <h3>2. Días de viaje</h3>
+                <div class="cards-3" id="itineraryCards">
+                    <div class="card iti selectable" data-id="it2" data-days="2" data-price="190">
+                    <img src="/assets/Iconos/mapa.png"><p>2 Días</p><span class="precio">S/ 190</span>
+                    </div>
+                    <div class="card iti selectable" data-id="it4" data-days="4" data-price="340">
+                    <img src="/assets/Iconos/mapa.png"><p>4 Días</p><span class="precio">S/ 340</span>
+                    </div>
+                    <div class="card iti selectable" data-id="it6" data-days="6" data-price="460">
+                    <img src="/assets/Iconos/mapa.png"><p>6 Días</p><span class="precio">S/ 460</span>
+                    </div>
+                </div>
+                </div>
+            </section>        
+        </div>
+
+        <div class="tarjeta-2">
+            <!-- Gastronomía modal -->
+            <section class="gastronomia">
+                <h2>Gastronomía <small>(elige 1)</small></h2>
+                <div class="cards-3">
+                <div class="card selectable gastro" data-id="picante" data-price="38">
+                    <img src="/assets/icons/cocina-tradicional.svg"><p>Picante Tacneño</p><span class="precio">S/ 38</span>
+                </div>
+                <div class="card selectable gastro" data-id="vino" data-price="75">
+                    <img src="/assets/icons/alta-cocina.svg"><p>Cata de Vino & Pisco</p><span class="precio">S/ 75</span>
+                </div>
+                <div class="card selectable gastro" data-id="callejera" data-price="22">
+                    <img src="/assets/icons/comida-callejera.svg"><p>Comida Callejera</p><span class="precio">S/ 22</span>
+                </div>
+                </div>
+            </section>
+        </div>
+        
+        <Div class="tarjeta-3">
+          <!-- Selector ciudad -->
+          <label class="field">
+            <span class="lbl">3. Ciudad / Atracción principal</span>
+            <select id="citySelect">
+              <option value="Tacna Ciudad">Tacna Ciudad</option>
+              <option value="Miculla">Petroglifos Miculla</option>
+              <option value="Valle Viñedos">Valle del Caplina</option>
+              <option value="Boca del Río">Boca del Río</option>
+            </select>
+          </label>
+          <!-- Actividades -->
+          <section class="hacer">
+            <h2>Cosas que Hacer <small id="actCounter">(0/0)</small></h2>
+            <div class="progress"><div id="progressBar"></div></div>
+            <div class="cards-3" id="actWrapper"></div>
+          </section>
+      </Div>
+    </article>
+
+    <!-- Resumen -->
+    <dialog id="cartModal">
+      <h3>Resumen de compra</h3>
+      <ul id="cartItems"></ul>
+      <p class="total">Total: <strong>S/ <span id="cartTotal">0</span></strong></p>
+      <div class="modal-actions">
+        <button id="cancelModal">Seguir eligiendo</button>
+        <button id="confirmModal">Confirmar compra</button>
+      </div>
+    </dialog>
+
+    <div class="wizard-nav">
+        <button id="stepPrev" aria-label="Anterior">←</button>
+        <button id="stepNext" aria-label="Siguiente">→</button>
+
+        <!-- mismo id que ya usas en JS -->
+        <button id="addToCart" class="btn-primary" disabled>Añadir</button>
+    </div>
+    <div id="toastContainer"></div>
+  </dialog>
+
+
+<!-- ╔════════════ SCRIPTS ════════════════════════ -->
+<script type="module" src="/js/pruebas.js"></script>
+<!-- Mapa JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+</body>
+</html>

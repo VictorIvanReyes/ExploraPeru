@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cusco | Explora Perú</title>
+
+  <link rel="stylesheet" href="/css/globalDepar.css" />
+  <link rel="stylesheet" href="/css/Destino2.css">
+  <link rel="stylesheet" href="/css/ContenidoDepar.css">
+  <!-- Mapa CSS -->
+  <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body data-dpto="CUSCO">
+  <nav class="navbar">
+    
+      <!-- Botón hamburguesa -->
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Enlaces -->
+      <div class="nav-links">
+        <div class="Nombre"> 
+          <p><b>Explora Perú </b></p>
+        </div>
+        <div class="Enlaces">
+          <a href="/Index.html">Inicio</a>
+          <a href="/Departamentos.html">Departamentos</a>
+          <a href="/Nosotros.html">Nosotros</a>
+          <a href="/Contactanos.html">Contáctanos</a>
+          <a href="/cart.html" class="cart-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+             <path d="M1.75 1.002a.75.75 0 1 0 0 1.5h1.835l1.24 5.113A3.752 3.752 0 0 0 2 11.25c0 .414.336.75.75.75h10.5a.75.75 0 0 0 0-1.5H3.628A2.25 2.25 0 0 1 5.75 9h6.5a.75.75 0 0 0 .73-.578l.846-3.595a.75.75 0 0 0-.578-.906 44.118 44.118 0 0 0-7.996-.91l-.348-1.436a.75.75 0 0 0-.73-.573H1.75ZM5 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+  </nav>
+  <!-- ╔════════════ LANDING CUSCO ════════════ -->
+<section class="landing-cusco">
+  
+  <!-- 1 · Hero intro -->
+  <div class="section1">
+    <div class="hero-text">
+      <h1>Cusco</h1>
+      <h2>Descripción General</h2>
+      <p>
+        Cusco, ubicada en lo alto de los Andes peruanos, fue el corazón del
+        Imperio Inca. Hoy en día es famosa por sus ruinas arqueológicas,
+        arquitectura colonial y cultura vibrante. La ciudad sirve como puerta
+        de entrada a Machu Picchu y al majestuoso Valle Sagrado.
+      </p>
+    </div>
+    <div class="hero-img">
+      <img src="/assets/Departamentos/Cusco.jpg" alt="Plaza de Armas de Cusco">
+    </div>
+    
+  </div>
+
+  <!-- 2 · Tres filas de tarjetas -->
+  <div class="section-cards">
+
+    <!-- 2-a  Cosas que hacer -->
+    <h3>Cosas que Hacer</h3>
+    <div class="card-row">
+      <div class="cardLanding">
+        <img src="/assets/Iconos/senderismo.png" alt="">
+        <p>Senderismo</p>
+      </div>
+      <div class="cardLanding">
+        <img src="/assets/Iconos/Guia.png" alt="">
+        <p>Visitas Guiadas</p>
+      </div>
+      <div class="cardLanding">
+        <img src="/assets/Iconos/D.Acuatico.png" alt="">
+        <p>Deportes Acuáticos</p>
+      </div>
+    </div>
+
+    <!-- 2-b  Gastronomía -->
+    <h3>Gastronomía</h3>
+    <div class="card-row">
+      <div class="cardLanding">
+        <img src="/assets/Iconos/Comida_Tradicional.png" alt="">
+        <p>Cocina Tradicional</p>
+      </div>
+      <div class="cardLanding">
+        <img src="/assets/Iconos/Gourmet.png" alt="">
+        <p>Alta Cocina</p>
+      </div>
+      <div class="cardLanding">
+        <img src="/assets/Iconos/Comida_Callejera.png" alt="">
+        <p>Comida Callejera</p>
+      </div>
+    </div>
+
+    <!-- 2-c  Alojamiento -->
+    <h3>Alojamiento</h3>
+    <div class="card-row">
+      <div class="cardLanding">
+        <img src="/assets/Iconos/Economico.png" alt="">
+        <p>Económico</p>
+      </div>
+      <div class="cardLanding">
+        <img src="/assets/Iconos/Medio.png" alt="">
+        <p>Gama Media</p>
+      </div>
+      <div class="cardLanding">
+        <img src="/assets/Iconos/Lujo.png" alt="">
+        <p>Lujo</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 · Two-column section (¿Por qué visitar?) -->
+  <div class="section2">
+    <div class="section2-text">
+      <h2>¿Por qué visitar Cusco?</h2>
+      <p>
+        La energía de Cusco se siente en cada calle empedrada. Desde los
+        mercados artesanales llenos de color hasta templos incas de piedra
+        perfectamente tallada, la ciudad invita a descubrir siglos de historia
+        viva.
+      </p>
+    </div>
+    <div class="section2-text">
+      <h2>Aventura sin límites</h2>
+      <p>
+        Trekking en la Montaña de Colores, rafting en el río Urubamba o
+        ciclismo de altura hacia el Valle Sagrado: Cusco es la base ideal para
+        los amantes de la adrenalina.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <div>
+       <h3>Itinerarios</h3>
+       <div class="card-row LandingItinerarios">
+         <div class="cardLanding">
+           <img src="/assets/Iconos/mapa.png" alt="">
+           <p>Itinerario 3 Días</p>
+         </div>
+         <div class="cardLanding">
+           <img src="/assets/Iconos/mapa.png" alt="">
+           <p>Itinerario 5 Días</p>
+         </div>
+         <div class="cardLanding">
+           <img src="/assets/Iconos/mapa.png" alt="">
+           <p>Itinerario 7 Días</p>
+         </div>
+       </div>
+    </div>
+    <!-- 5 · Mapa embed -->
+    <div class="section3">
+      <h3>Mapa</h3>
+        <div id="map" style="height:480px"></div>
+  
+    </div>
+  </div>
+  <!-- 4 · Itinerarios -->
+
+</section>
+<!-- ════════════════════════════════════════════ -->
+
+  <footer>
+    <p>&copy; 2025 Explora el Mundo. Todos los derechos reservados.</p>
+  </footer>
+
+<!-- ╔════════════ BOTÓN PRINCIPAL ════════════ -->
+<button id="openReserve" class="btn-reserve">Reserva ya</button>
+
+<!-- ╔════════════ MODAL PLANIFICADOR ═════════╗ -->
+<dialog id="reserveModal" class="reserve-modal">
+  <button class="modal-close" aria-label="Cerrar">×</button>
+
+  <!-- ▼▼▼ CONTENIDO COMPLETO DEL PLANIFICADOR ▼▼▼ -->
+  <article class="content" data-dept="Cusco">
+    <!-- Intro -->
+    <section class="intro">
+      <div class="intro-text">
+        <h2>Cusco: Corazón del Imperio Inca</h2>
+        <p>Historia, aventura y gastronomía en la capital del antiguo Tahuantinsuyo.</p>
+      </div>
+    </section>
+
+    <div class="tarjeta-1"> 
+        <!-- Wizard -->
+        <section class="custom wizard">
+          <h2>Planifica tu Viaje</h2>
+          <!-- Paso 1 -->
+          <div class="step step-1">
+            <label class="field persons-field">
+              <span class="lbl">1. Personas que viajan</span>
+              <div class="stepper">
+                <button type="button" class="stepper-btn" id="decP">–</button>
+                <input type="number" id="numPersons" min="1" value="1" readonly>
+                <button type="button" class="stepper-btn" id="incP">+</button>
+              </div>
+            </label>
+          </div>
+  
+          <!-- Paso 2 -->
+          <div class="step step-2">
+            <h3>2. Días de viaje</h3>
+            <div class="cards-3" id="itineraryCards">
+              <div class="card iti selectable" data-id="it3" data-days="3" data-price="210">
+                <img src="/assets/Iconos/mapa.png"><p>3 Días</p><span class="precio">S/ 210</span>
+              </div>
+              <div class="card iti selectable" data-id="it5" data-days="5" data-price="360">
+                <img src="/assets/Iconos/mapa.png"><p>5 Días</p><span class="precio">S/ 360</span>
+              </div>
+              <div class="card iti selectable" data-id="it7" data-days="7" data-price="480">
+                <img src="/assets/Iconos/mapa.png"><p>7 Días</p><span class="precio">S/ 480</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="tarjeta-2">
+        <!-- Gastronomía (modal) -->
+        <section class="gastronomia">
+          <h2>Hospedaje <small>(elige 1)</small></h2>
+          <div class="cards-3">
+            <div class="card selectable gastro" data-id="regional" data-price="25">
+              <img src="/assets/Iconos/Economico.png"><p>Basico</p><span class="precio">S/ 15</span>
+            </div>
+            <div class="card selectable gastro" data-id="fusion" data-price="60">
+              <img src="/assets/Iconos/Medio.png"><p>Intermedio</p><span class="precio">S/ 30</span>
+            </div>
+            <div class="card selectable gastro" data-id="callejera" data-price="15">
+              <img src="/assets/Iconos/Lujo.png"><p>Lujo</p><span class="precio">S/ 65</span>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="tarjeta-3">
+        <!-- Cities -->
+        <label class="field">
+          <span class="lbl">3. Ciudad / Atracción principal</span>
+          <select id="citySelect">
+            <option value="Chachapoyas Ciudad">Chachapoyas Ciudad</option>
+            <option value="Fortaleza de Kuélap">Fortaleza de Kuélap</option>
+            <option value="Catarata Gocta">Catarata Gocta</option>
+            <option value="Leymebamba">Leymebamba</option>
+          </select>
+        </label>
+  
+        <!-- Actividades -->
+        <section class="hacer">
+          <h2>Cosas que Hacer <small id="actCounter">(0/0)</small></h2>
+          <div class="progress"><div id="progressBar"></div></div>
+          <div class="cards-3" id="actWrapper"></div>
+        </section>
+      </div>
+  </article>
+
+
+  <!-- Modal resumen compra -->
+  <dialog id="cartModal">
+    <h3>Resumen de compra</h3>
+    <ul id="cartItems"></ul>
+    <p class="total">Total: <strong>S/ <span id="cartTotal">0</span></strong></p>
+    <div class="modal-actions">
+      <button id="cancelModal">Seguir eligiendo</button>
+      <button id="confirmModal">Confirmar compra</button>
+    </div>
+  </dialog>
+  <div class="wizard-nav">
+        <button id="stepPrev" aria-label="Anterior">←</button>
+        <button id="stepNext" aria-label="Siguiente">→</button>
+
+        <!-- mismo id que ya usas en JS -->
+        <button id="addToCart" class="btn-primary" disabled>Añadir</button>
+  </div>
+
+  <div id="toastContainer"></div>
+</dialog>
+
+<!-- ╔════════════ SCRIPTS ════════════════════════ -->
+<script type="module" src="/js/depar-Carrito.js"></script>
+<!-- Mapa JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/js/Mapa.js"></script>
+
+</body>
+</html>

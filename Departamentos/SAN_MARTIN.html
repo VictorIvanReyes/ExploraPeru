@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>San Martín | Explora Perú</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="/css/globalDepar.css" />
+  <link rel="stylesheet" href="/css/Destino2.css" />
+  <link rel="stylesheet" href="/css/ContenidoDepar.css" />
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body data-dpto="SAN_MARTIN">
+  <!-- ═════════ NAVBAR ═════════ -->
+  <nav class="navbar">
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links">
+      <div class="Nombre"><p><b>Explora Perú</b></p></div>
+      <div class="Enlaces">
+        <a href="/Index.html">Inicio</a>
+        <a href="/Departamentos.html">Departamentos</a>
+        <a href="/Nosotros.html">Nosotros</a>
+        <a href="/Contactanos.html">Contáctanos</a>
+        <a href="/cart.html" class="cart-link">
+          <!-- ícono carrito -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path d="M1.75 1.002a.75.75 0 1 0 0 1.5h1.835l1.24 5.113A3.752 3.752 0 0 0 2 11.25c0 .414.336.75.75.75h10.5a.75.75 0 0 0 0-1.5H3.628A2.25 2.25 0 0 1 5.75 9h6.5a.75.75 0 0 0 .73-.578l.846-3.595a.75.75 0 0 0-.578-.906 44.118 44.118 0 0 0-7.996-.91l-.348-1.436a.75.75 0 0 0-.73-.573H1.75ZM5 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═════════ LANDING – SAN MARTÍN ═════════ -->
+  <section class="landing-cusco">
+    <!-- 1 · Hero -->
+    <div class="section1">
+      <div class="hero-text">
+        <h1>San Martín</h1>
+        <h2>Tarapoto, Cataratas y Lagunas Esmeralda</h2>
+        <p>
+          En la selva alta peruana, San Martín sorprende con exuberantes
+          cataratas, plantaciones de cacao y pueblos nativos que conservan
+          tradiciones ancestrales. Tarapoto, conocida como la “Ciudad de las
+          Palmeras”, es la base perfecta para explorar cascadas como
+          Ahuashiyacu y la mágica Laguna Azul en Sauce.
+        </p>
+      </div>
+      <div class="hero-img">
+        <img src="/assets/Departamentos/SanMartin.jpg" alt="Laguna Azul en Sauce, San Martín" />
+      </div>
+    </div>
+
+    <!-- 2 · Tarjetas -->
+    <div class="section-cards">
+      <h3>Cosas que Hacer</h3>
+      <div class="card-row">
+        <div class="cardLanding"><img src="/assets/Iconos/senderismo.png" alt=""><p>Catarata Ahuashiyacu</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Guia.png" alt=""><p>Tour Cacao Lamas</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/D.Acuatico.png" alt=""><p>Laguna Azul</p></div>
+      </div>
+
+      <!-- Gastronomía fija -->
+      <h3>Gastronomía</h3>
+      <div class="card-row">
+        <div class="cardLanding"><img src="/assets/Iconos/Comida_Tradicional.png" alt=""><p>Cocina Tradicional</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Gourmet.png" alt=""><p>Alta Cocina</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Comida_Callejera.png" alt=""><p>Comida Callejera</p></div>
+      </div>
+
+      <!-- Alojamiento -->
+      <h3>Alojamiento</h3>
+      <div class="card-row">
+        <div class="cardLanding"><img src="/assets/Iconos/Economico.png" alt=""><p>Económico</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Medio.png" alt=""><p>Ecolodge Selva</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Lujo.png" alt=""><p>Resort 5★</p></div>
+      </div>
+    </div>
+
+    <!-- 3 · Two-column -->
+    <div class="section2">
+      <div class="section2-text">
+        <h2>¿Por qué visitar San Martín?</h2>
+        <p>
+          Camina por el mirador de la Cordillera Escalera, aprende sobre el
+          pueblo quechua-lamista en Lamas y disfruta de chocolate artesanal
+          elaborado con el mejor cacao amazónico. Clima cálido todo el año y
+          naturaleza vibrante te esperan.
+        </p>
+      </div>
+      <div class="section2-text">
+        <h2>Aventura entre Ríos y Montañas</h2>
+        <p>
+          Practica kayak en la Laguna Azul, avista aves en la Reserva
+          Tingana y vive la adrenalina del rápel en la catarata de
+          Carpishoyacu. San Martín reúne adrenalina, cultura y sabores
+          auténticos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Itinerarios -->
+    <div>
+      <h3>Itinerarios</h3>
+      <div class="card-row LandingItinerarios">
+        <div class="cardLanding"><img src="/assets/Iconos/mapa.png" alt=""><p>Itinerario 3 Días</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/mapa.png" alt=""><p>Itinerario 5 Días</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/mapa.png" alt=""><p>Itinerario 7 Días</p></div>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="section3"><h3>Mapa</h3><div id="map" style="height:480px"></div></div>
+  </section>
+
+  <!-- ═════════ FOOTER ═════════ -->
+  <footer><p>&copy; 2025 Explora el Mundo. Todos los derechos reservados.</p></footer>
+
+  <!-- BOTÓN reserva -->
+  <button id="openReserve" class="btn-reserve">Reserva ya</button>
+
+  <!-- ═════════ MODAL PLANIFICADOR ═════════ -->
+  <dialog id="reserveModal" class="reserve-modal">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+
+    <article class="content" data-dept="San Martín">
+      <!-- Intro modal -->
+      <section class="intro">
+        <div class="intro-text">
+          <h2>San Martín: Selva Alta y Cacao</h2>
+          <p>Tarapoto, cascadas esmeralda y sabor amazónico.</p>
+        </div>
+      </section>
+
+      <div class="tarjeta-1"> 
+        <!-- Wizard -->
+        <section class="custom wizard">
+          <h2>Planifica tu Viaje</h2>
+          <!-- Paso 1 -->
+          <div class="step step-1">
+            <label class="field persons-field">
+              <span class="lbl">1. Personas que viajan</span>
+              <div class="stepper">
+                <button type="button" class="stepper-btn" id="decP">–</button>
+                <input type="number" id="numPersons" min="1" value="1" readonly>
+                <button type="button" class="stepper-btn" id="incP">+</button>
+              </div>
+            </label>
+          </div>
+  
+          <!-- Paso 2 -->
+          <div class="step step-2">
+            <h3>2. Días de viaje</h3>
+            <div class="cards-3" id="itineraryCards">
+              <div class="card iti selectable" data-id="it3" data-days="3" data-price="210">
+                <img src="/assets/Iconos/mapa.png"><p>3 Días</p><span class="precio">S/ 210</span>
+              </div>
+              <div class="card iti selectable" data-id="it5" data-days="5" data-price="360">
+                <img src="/assets/Iconos/mapa.png"><p>5 Días</p><span class="precio">S/ 360</span>
+              </div>
+              <div class="card iti selectable" data-id="it7" data-days="7" data-price="480">
+                <img src="/assets/Iconos/mapa.png"><p>7 Días</p><span class="precio">S/ 480</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="tarjeta-2">
+        <!-- Gastronomía (modal) -->
+        <section class="gastronomia">
+          <h2>Hospedaje <small>(elige 1)</small></h2>
+          <div class="cards-3">
+            <div class="card selectable gastro" data-id="regional" data-price="25">
+              <img src="/assets/Iconos/Economico.png"><p>Basico</p><span class="precio">S/ 15</span>
+            </div>
+            <div class="card selectable gastro" data-id="fusion" data-price="60">
+              <img src="/assets/Iconos/Medio.png"><p>Intermedio</p><span class="precio">S/ 30</span>
+            </div>
+            <div class="card selectable gastro" data-id="callejera" data-price="15">
+              <img src="/assets/Iconos/Lujo.png"><p>Lujo</p><span class="precio">S/ 65</span>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="tarjeta-3">
+        <!-- Cities -->
+        <label class="field">
+          <span class="lbl">3. Ciudad / Atracción principal</span>
+          <select id="citySelect">
+            <option value="Chachapoyas Ciudad">Chachapoyas Ciudad</option>
+            <option value="Fortaleza de Kuélap">Fortaleza de Kuélap</option>
+            <option value="Catarata Gocta">Catarata Gocta</option>
+            <option value="Leymebamba">Leymebamba</option>
+          </select>
+        </label>
+  
+        <!-- Actividades -->
+        <section class="hacer">
+          <h2>Cosas que Hacer <small id="actCounter">(0/0)</small></h2>
+          <div class="progress"><div id="progressBar"></div></div>
+          <div class="cards-3" id="actWrapper"></div>
+        </section>
+      </div>
+    </article>
+
+    
+
+    <!-- Resumen -->
+    <dialog id="cartModal">
+      <h3>Resumen de compra</h3>
+      <ul id="cartItems"></ul>
+      <p class="total">Total: <strong>S/ <span id="cartTotal">0</span></strong></p>
+      <div class="modal-actions">
+        <button id="cancelModal">Seguir eligiendo</button>
+        <button id="confirmModal">Confirmar compra</button>
+      </div>
+    </dialog>
+    <div class="wizard-nav">
+        <button id="stepPrev" aria-label="Anterior">←</button>
+        <button id="stepNext" aria-label="Siguiente">→</button>
+
+        <!-- mismo id que ya usas en JS -->
+        <button id="addToCart" class="btn-primary" disabled>Añadir</button>
+    </div>
+    <div id="toastContainer"></div>
+  </dialog>
+
+  <!-- ═════════ SCRIPTS ═════════ -->
+  <script type="module" src="/js/depar-Carrito.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/js/Mapa.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lambayeque | Explora Perú</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="/css/globalDepar.css" />
+  <link rel="stylesheet" href="/css/Destino2.css" />
+  <link rel="stylesheet" href="/css/ContenidoDepar.css" />
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body data-dpto="LAMBAYEQUE">
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar">
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links">
+      <div class="Nombre"><p><b>Explora Perú</b></p></div>
+      <div class="Enlaces">
+        <a href="/Index.html">Inicio</a>
+        <a href="/Departamentos.html">Departamentos</a>
+        <a href="/Nosotros.html">Nosotros</a>
+        <a href="/Contactanos.html">Contáctanos</a>
+        <a href="/cart.html" class="cart-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path d="M1.75 1.002a.75.75 0 0 0 0 1.5h1.835l1.24 5.113A3.752 3.752 0 0 0 2 11.25c0 .414.336.75.75.75h10.5a.75.75 0 0 0 0-1.5H3.628A2.25 2.25 0 0 1 5.75 9h6.5a.75.75 0 0 0 .73-.578l.846-3.595a.75.75 0 0 0-.578-.906 44.118 44.118 0 0 0-7.996-.91l-.348-1.436a.75.75 0 0 0-.73-.573H1.75ZM5 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ LANDING – LAMBAYEQUE ═══════════ -->
+  <section class="landing-cusco">
+    <!-- 1 · Hero -->
+    <div class="section1">
+      <div class="hero-text">
+        <h1>Lambayeque</h1>
+        <h2>Tesoros de Sipán, Bosque de Pómac y Playas del Norte</h2>
+        <p>
+          Famoso por el Señor de Sipán y exquisita gastronomía norteña,
+          Lambayeque combina la historia preincaica, playas tranquilas como
+          Pimentel y el impresionante Bosque Seco de Pómac, hogar de algarrobos
+          milenarios y pirámides de adobe.
+        </p>
+      </div>
+      <div class="hero-img">
+        <img src="/assets/Departamentos/Lambayeque.jpg" alt="Museo Tumbas Reales de Sipán en Lambayeque" />
+      </div>
+    </div>
+
+    <!-- 2 · Tarjetas -->
+    <div class="section-cards">
+      <h3>Cosas que Hacer</h3>
+      <div class="card-row">
+        <div class="cardLanding"><img src="/assets/Iconos/senderismo.png" alt=""><p>Museo Sipán</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Guia.png" alt=""><p>Pirámides Túcume</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/D.Acuatico.png" alt=""><p>Playa Pimentel</p></div>
+      </div>
+
+      <!-- Gastronomía fija -->
+      <h3>Gastronomía</h3>
+      <div class="card-row">
+        <div class="cardLanding"><img src="/assets/Iconos/Comida_Tradicional.png" alt=""><p>Cocina Tradicional</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Gourmet.png" alt=""><p>Alta Cocina</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Comida_Callejera.png" alt=""><p>Comida Callejera</p></div>
+      </div>
+
+      <h3>Alojamiento</h3>
+      <div class="card-row">
+        <div class="cardLanding"><img src="/assets/Iconos/Economico.png" alt=""><p>Económico</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Medio.png" alt=""><p>Gama Media</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/Lujo.png" alt=""><p>Lujo</p></div>
+      </div>
+    </div>
+
+    <!-- 3 · Two-column -->
+    <div class="section2">
+      <div class="section2-text">
+        <h2>¿Por qué visitar Lambayeque?</h2>
+        <p>
+          El Museo Tumbas Reales resguarda uno de los hallazgos
+          arqueológicos más importantes de América: el Señor de Sipán.
+          Recorre las casonas de Chiclayo, degusta el célebre arroz con pato y
+          déjate envolver por la hospitalidad norteña.
+        </p>
+      </div>
+      <div class="section2-text">
+        <h2>Cultura y Naturaleza en el Norte</h2>
+        <p>
+          Explora el Bosque de Pómac en bicicleta, observa aves en sus
+          miradores o practica surf y stand-up paddle en las largas olas de
+          Pimentel. Lambayeque es historia viva y diversión costera.
+        </p>
+      </div>
+    </div>
+
+    <!-- Itinerarios -->
+    <div>
+      <h3>Itinerarios</h3>
+      <div class="card-row LandingItinerarios">
+        <div class="cardLanding"><img src="/assets/Iconos/mapa.png" alt=""><p>Itinerario 2 Días</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/mapa.png" alt=""><p>Itinerario 4 Días</p></div>
+        <div class="cardLanding"><img src="/assets/Iconos/mapa.png" alt=""><p>Itinerario 6 Días</p></div>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="section3"><h3>Mapa</h3><div id="map" style="height:480px"></div></div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer><p>&copy; 2025 Explora el Mundo. Todos los derechos reservados.</p></footer>
+
+  <!-- BOTÓN reserva -->
+  <button id="openReserve" class="btn-reserve">Reserva ya</button>
+
+  <!-- ═══════════ MODAL PLANIFICADOR ═══════════ -->
+  <dialog id="reserveModal" class="reserve-modal">
+    <button class="modal-close" aria-label="Cerrar">×</button>
+
+    <article class="content" data-dept="Lambayeque">
+      <!-- Intro modal -->
+      <section class="intro">
+        <div class="intro-img"><img src="/assets/Destinos/lambayeque-hero.jpg" alt="Tesoros de Lambayeque"></div>
+        <div class="intro-text">
+          <h2>Lambayeque: Tesoros del Reino Sicán</h2>
+          <p>Museo Sipán, Bosque Pómac y playas de Pimentel.</p>
+        </div>
+      </section>
+
+      <!-- Wizard -->
+      <section class="custom wizard">
+        <h2>Planifica tu Viaje</h2>
+        <!-- Paso 1 -->
+        <div class="step step-1">
+          <label class="field persons-field">
+            <span class="lbl">1. Personas que viajan</span>
+            <div class="stepper">
+              <button type="button" class="stepper-btn" id="decP">–</button>
+              <input type="number" id="numPersons" min="1" value="1" readonly>
+              <button type="button" class="stepper-btn" id="incP">+</button>
+            </div>
+          </label>
+          <button class="btn-next" id="toStep2" disabled>Siguiente</button>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="step step-2" data-disabled>
+          <h3>2. Días de viaje</h3>
+          <div class="cards-3" id="itineraryCards">
+            <div class="card iti selectable" data-id="it2" data-days="2" data-price="190">
+              <img src="/assets/Iconos/mapa.png"><p>2 Días</p><span class="precio">S/ 190</span>
+            </div>
+            <div class="card iti selectable" data-id="it4" data-days="4" data-price="340">
+              <img src="/assets/Iconos/mapa.png"><p>4 Días</p><span class="precio">S/ 340</span>
+            </div>
+            <div class="card iti selectable" data-id="it6" data-days="6" data-price="450">
+              <img src="/assets/Iconos/mapa.png"><p>6 Días</p><span class="precio">S/ 450</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gastronomía modal -->
+      <section class="gastronomia">
+        <h2>Gastronomía <small>(elige 1)</small></h2>
+        <div class="cards-3">
+          <div class="card selectable gastro" data-id="arroz_pato" data-price="35">
+            <img src="/assets/icons/cocina-tradicional.svg"><p>Arroz con Pato</p><span class="precio">S/ 35</span>
+          </div>
+          <div class="card selectable gastro" data-id="cabrito" data-price="70">
+            <img src="/assets/icons/alta-cocina.svg"><p>Cabrito Norteño</p><span class="precio">S/ 70</span>
+          </div>
+          <div class="card selectable gastro" data-id="callejera" data-price="22">
+            <img src="/assets/icons/comida-callejera.svg"><p>Comida Callejera</p><span class="precio">S/ 22</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selector ciudad -->
+      <label class="field">
+        <span class="lbl">3. Ciudad / Atracción principal</span>
+        <select id="citySelect">
+          <option value="Chiclayo">Chiclayo</option>
+          <option value="Museo Sipán">Museo Sipán</option>
+          <option value="Pirámides de Túcume">Pirámides de Túcume</option>
+          <option value="Bosque de Pómac">Bosque de Pómac</option>
+        </select>
+      </label>
+
+      <!-- Actividades -->
+      <section class="hacer">
+        <h2>Cosas que Hacer <small id="actCounter">(0/0)</small></h2>
+        <div class="progress"><div id="progressBar"></div></div>
+        <div class="cards-3" id="actWrapper"></div>
+      </section>
+    </article>
+
+    <!-- Botón flotante -->
+    <button class="btn-add-float" id="addToCart" disabled>Añadir (0)</button>
+    <div class="floating-cart" id="selectedCartBadge">
+      <svg width="24" height="24" viewBox="0 0 24 24"><path d="M7 4h-2l-1 2h1l3.6 7.59-1.35 2.45A2 2 0 0 0 9 20h10v-2H9.42a.25.25 0 0 1-.22-.37L10 15h7.55a2 2 0 0 0 1.9-1.37L22 6H5.21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span id="selectedCount">0</span>
+    </div>
+
+    <!-- Resumen -->
+    <dialog id="cartModal">
+      <h3>Resumen de compra</h3>
+      <ul id="cartItems"></ul>
+      <p class="total">Total: <strong>S/ <span id="cartTotal">0</span></strong></p>
+      <div class="modal-actions">
+        <button id="cancelModal">Seguir eligiendo</button>
+        <button id="confirmModal">Confirmar compra</button>
+      </div>
+    </dialog>
+
+    <div id="toastContainer"></div>
+  </dialog>
+
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script type="module" src="/js/depar-Carrito.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/js/Mapa.js"></script>
+</body>
+</html>

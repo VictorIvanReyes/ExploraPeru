@@ -1,0 +1,194 @@
+/* --- Reset breve --- */
+*,
+*::before,
+*::after { box-sizing:border-box; }
+
+body { margin:0; font-family:Inter,Arial,Helvetica,sans-serif; background:#f2f4f7; }
+
+/* --- Contenedor demo --- */
+.case-wrapper { 
+    max-width:1100px; 
+    margin:60px auto; 
+    padding:0 20px; 
+    display: flex;
+    gap: 20px;
+}
+
+/* --- Tarjeta --- */
+.case-card{
+  width: 260px;          /* antes 100 % */
+  flex: 0 0 260px;       /* ancho fijo dentro del slide            */
+  height: 420px;          /* ocupa todo el ancho disponible */
+  min-width:480;
+  max-width: none;
+  margin-left: 0px;           /* evita que se encoja demasiado */
+  display:flex;                       /* ahora: imagen ←, texto → */
+  color:#fff;
+  border-radius:24px;
+  overflow:visible;                   /* deja salir la imagen por la IZQ */
+  text-decoration:none;
+  transition:transform .35s,box-shadow .35s;
+  max-width: 4  80px; 
+  
+}
+.case-card:hover{
+  transform:translateY(-6px);
+}
+
+
+/* --- Imagen (izquierda) --- */
+.case-image{
+  flex:0 0 200px;             /* ancho fijo → igual en todas     */
+  width:200px;
+  height: 340px;;               /* alto fijo para estandarizar     */
+  margin:20px -30px 20px 20px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 18px 34px rgba(0,0,0,.35);
+  transition:transform .35s;
+}
+.case-image img{
+  width:100%; height:100%;
+  object-fit:cover;           /* recorte uniforme, sin distorsión */
+}
+.case-overlay{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(300deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.35) 100%);
+  transition:opacity .35s;
+}
+
+/* efecto hover */
+.case-card:hover .case-image{ transform:translate(-6px,-6px); }
+.case-card:hover .case-overlay{ opacity:0; }
+
+/* --- Texto (derecha) --- */
+.case-content{
+  flex:1 1 0;
+  padding: 30px 30px 30px 40px;
+  min-width: 200px; 
+  display:flex; flex-direction:column; justify-content:center;
+  background:rgba(0,0,0,.45);
+  box-shadow:0 14px 28px rgba(0,0,0,.15);
+  border-top-right-radius: 20%;
+  margin-right: -20px;
+}
+.case-tag   { text-transform:uppercase; font-size:13px; letter-spacing:1.2px; color:white; margin:0 0 10px;font-weight: 200; }
+.case-title { font-size:24px; line-height:1.25; margin:0 0 16px; }
+.case-text  { font-size:16px; line-height:1.5; opacity:.9; margin:0 0 26px; }
+.case-arrow { width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center;
+              color:#46a9ff; border-radius:50%; transition:transform .3s; }
+.case-card:hover .case-arrow{ transform:translateX(6px); }
+@media (min-width:576px){
+  .case-card { max-width:240px; }
+  .case-image{ height:auto; }
+}
+
+/* ────────────────────────────────────────────────
+   ≥768 px  (3 tarjetas por slide, JS spaceBetween:22)
+──────────────────────────────────────────────── */
+@media (min-width:768px){
+  .case-card{
+    max-width:260px;
+    flex-direction:row;         /* imagen ←  texto →        */
+  }
+  .case-image{
+    flex:0 0 200px;
+    width:200px;
+    height:auto;
+    margin:20px -30px 20px 20px; /* “flotante”               */
+    border-radius:20px;          /* vuelve a esquinas full   */
+  }
+  .case-content{
+    padding:30px 40px 40px;
+    text-align:left;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;   /* se ocultan solo en móvil */
+  }
+}
+
+/* ────────────────────────────────────────────────
+   ≥1024 px  (aún 3 tarjetas, sólo retocas imagen)
+──────────────────────────────────────────────── */
+@media (min-width:1024px){
+  .case-image{
+    flex:0 0 220px;
+    width:220px;
+    height:auto;
+    margin:12px -18px 12px 15px;
+  }
+  .Cuerpo{
+    padding: 1rem !important;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex !important;   /* se muestran en tablet y desktop */
+  }
+  
+}
+
+/* ────────────────────────────────────────────────
+   ≥1300 px  (4 tarjetas por slide, JS spaceBetween:32)
+──────────────────────────────────────────────── */
+@media (min-width:1300px){
+  .case-card { max-width:280px; }
+  .case-image{
+    flex:0 0 230px;
+    width:230px;
+    height:auto;
+    margin:20px -30px 20px 20px;
+  }
+  .case-content{ padding:40px 32px 48px 48px; }
+  .Cuerpo{
+    padding: 3rem !important;
+  }
+}
+
+/* ────────────────────────────────────────────────
+   Mini “respiro” vertical para que no rocen el carrusel
+──────────────────────────────────────────────── */
+.sierra-carousel .swiper-slide,
+.selva-carousel  .swiper-slide,
+.costa-carousel  .swiper-slide{
+  padding-top:12px;
+  padding-bottom:12px;
+}
+@media (min-width:768px){
+  .sierra-carousel .swiper-slide,
+  .selva-carousel  .swiper-slide,
+  .costa-carousel  .swiper-slide{
+    padding-top:16px;
+    padding-bottom:16px;
+  }
+  
+}
+@media (max-width: 575.98px){
+  .case-image{
+    flex: 0 0 180px;
+    height: auto;
+  }
+  .Cuerpo{
+    padding: 0 20px !important;
+  }
+  .case-content{
+    padding: 30px 20px 30px 40px;
+    min-width: 170px;
+  }
+ }
+
+
+
+.destinos-carousel{
+    margin-top: 20px;
+}
+.destinos-carousel{
+  padding: 20px ;     /* antes 40 px ↑↓ : bájalo a 20 o lo que prefieras */
+}
+
+/* cada slide */
+
+.Cuerpo{
+    padding: 3rem;
+}

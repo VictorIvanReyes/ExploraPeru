@@ -1,0 +1,256 @@
+body { margin:0; font-family:Inter,Arial,Helvetica,sans-serif; background:#f2f4f7; }
+.wrapper{
+  max-width:1000px;
+  margin:3rem auto;
+  padding:0 1rem;
+  margin-top: 5rem;
+}
+h1{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:1.5rem;
+  color:#0f766e;               /* mismo verde de tu marca */
+}
+
+/* ════════════ Tabla ════════════ */
+.cart-table{
+  width:100%;
+  border-collapse:separate;    /* permite shadows */
+  border-spacing:0;
+  background:#fff;
+  border-radius:1rem;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  overflow:hidden;             /* oculta el radio */
+}
+.cart-table thead{
+  background:#e9f5f4;          /* leve verde */
+}
+.cart-table th,
+.cart-table td{
+  padding:1rem 1.25rem;
+  font-size:.95rem;
+}
+.cart-table th{
+  color:#0f766e;
+  text-transform:uppercase;
+  letter-spacing:.03em;
+  font-weight:600;
+}
+.cart-table tbody tr:nth-child(even){
+  background:#f9fbfb;          /* zebra */
+}
+.cart-table img{
+  width:48px;height:48px;
+  border-radius:.5rem;
+  object-fit:cover;
+  box-shadow:0 2px 6px rgba(0,0,0,.12);
+}
+
+/* ════════════ Bloque resumen ════════════ */
+.resumen{
+  max-width:400px;
+  margin:2.5rem 0 0 auto;      /* se alinea a la derecha */
+  background:#fff;
+  padding:1.5rem 2rem;
+  border-radius:1rem;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+.resumen h2{
+  margin:0 0 .8rem;
+  font-size:1.25rem;
+  color:#0f766e;
+}
+.resumen p{
+  display:flex;
+  justify-content:space-between;
+  margin:.4rem 0;
+  font-size:.95rem;
+}
+.resumen p strong{
+  font-weight:700;
+}
+.resumen p:last-of-type{
+  font-size:1.05rem;
+  margin-top:.8rem;
+}
+
+/* ════════════ Botones ════════════ */
+.btn{
+  padding:.8rem 1.8rem;
+  border:none;
+  border-radius:2rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+}
+.btn-primary{
+  background:#0f766e;
+  color:#fff;
+}
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 16px rgba(15,118,110,.35);
+}
+.btn-secondary{
+  background:#e5e7eb;
+  color:#374151;
+}
+.btn-secondary:hover{
+  background:#d1d5db;
+}
+/* Botón ver-detalle ─ estilo “ojo” circular */
+.btn-view{
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:.35rem;
+  border-radius:50%;
+  transition:background .15s;
+}
+.btn-view svg{
+  width:20px;height:20px;
+  fill:#64748b;                /* gris azulado */
+}
+.btn-view:hover{background:#f1f5f9;}
+.btn-view[aria-expanded="true"] svg{fill:#0f766e;} /* activo */
+
+/* Fila oculta */
+.hidden{display:none;}
+/* ——— CONTENEDOR DETALLE ——— */
+.accordion {
+  background:#f9fbfb;
+  border-radius:.75rem;
+  margin:.4rem 0;
+  padding:.9rem 1.25rem;
+  box-shadow:inset 0 0 0 1px #e2e8f0;
+  overflow:hidden;
+  max-height:0;                          /* contraído por defecto  */
+  transition:max-height .35s ease;
+}
+.accordion.open{max-height:500px;}       /* suficiente para ≈8-10 líneas */
+
+/* ——— LISTA DE ÍTEMS ——— */
+.accordion ul{
+  list-style:none;
+  padding:0;margin:0;
+  font-size:.9rem;
+}
+.accordion li{
+  display:flex;justify-content:space-between;
+  padding:.35rem 0;
+  border-bottom:1px dashed #d1d5db;
+}
+.accordion li:last-child{border-bottom:none;}
+.accordion li span:first-child{color:#334155;}
+.accordion li span:last-child{font-weight:600;color:#0f766e;}
+
+
+/* ════════════ Responsivo ════════════ */
+@media(max-width:720px){
+  .cart-table thead{display:none;}       /* oculta encabezados para móviles */
+  .cart-table, .cart-table tbody, .cart-table tr, .cart-table td{
+    display:block;width:100%;
+  }
+  .cart-table tr{margin-bottom:1rem;border:1px solid #e5e7eb;border-radius:.75rem;background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.05);}
+  .cart-table td{
+    padding:.75rem 1rem;
+    text-align:right;position:relative;
+  }
+  .cart-table td::before{                /* “etiqueta” = nombre del campo */
+    content:attr(data-label);
+    position:absolute;
+    left:1rem;top:.75rem;
+    font-weight:600;
+    color:#475569;
+  }
+  .resumen{margin-inline:auto;}          /* centra bloque resumen */
+}
+
+/* ——————— MOBILE (hasta 720px) ——————— */
+@media (max-width: 720px) {
+  .cart-table thead { display: none; }
+  .cart-table, .cart-table tbody, .cart-table tr, .cart-table td {
+    display: block;
+    width: 100%;
+  }
+  .cart-table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: .75rem;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+  }
+  .cart-table td {
+    padding: .75rem 1rem;
+    text-align: right;
+    position: relative;
+  }
+  .cart-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem; top: .75rem;
+    font-weight: 600;
+    color: #475569;
+  }
+  .resumen {
+    margin: 2rem auto 0;
+    width: 90%;
+  }
+}
+
+/* ——————— TABLET (721px–1024px) ——————— */
+@media (min-width: 721px) and (max-width: 1024px) {
+  .wrapper {
+    padding: 0 1.5rem;
+  }
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+  }
+  .cart-table {
+    display: block;
+    overflow-x: auto;
+    /* permite scroll horizontal suave */
+  }
+  .cart-table th,
+  .cart-table td {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .resumen {
+    max-width: 90%;
+    margin: 2rem auto 0;
+  }
+  .btn {
+    padding: .75rem 1.5rem;
+    font-size: .95rem;
+  }
+}
+
+/* ——————— DESKTOP (desde 1025px) ——————— */
+@media (min-width: 1025px) {
+  .wrapper {
+    max-width: 1000px;
+    margin-top: 5rem;
+    padding: 0 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .cart-table {
+    width: 100%;
+  }
+  .btn {
+    padding: .8rem 1.8rem;
+  }
+  .resumen {
+    max-width: 400px;
+    margin: 2.5rem 0 0 auto;
+  }
+}
+
+/* ——————— TIPOGRAFÍA Y ELEMENTOS FLUIDOS ——————— */
+/* Tipos de letra y espaciados que se adaptan */
+body {
+  font-size: clamp(.9rem, 1.5vw, 1rem);
+  line-height: 1.6;
+}

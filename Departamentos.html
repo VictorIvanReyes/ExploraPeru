@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explora el Mundo - Turismo</title>
+  <link rel="shortcut icon" href="/build/logo (2).png " type="image/x-icon">
+  <link rel="stylesheet" href="/css/Destino2.css">
+  <link rel="stylesheet" href="/css/destinos.css">
+  <!-- ① CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Botón hamburguesa -->
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Enlaces -->
+    <div class="nav-links">
+      <div class="Nombre"> 
+        <p><b>Explora Perú </b></p>
+      </div>
+      <div class="Enlaces">
+        <a href="Index.html">Inicio</a>
+        <a href="#">Departamentos</a>
+        <a href="/Nosotros.html">Nosotros</a>
+        <a href="Contactanos.html">Contáctanos</a>
+        <a href="/cart.html" class="cart-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path d="M1.75 1.002a.75.75 0 1 0 0 1.5h1.835l1.24 5.113A3.752 3.752 0 0 0 2 11.25c0 .414.336.75.75.75h10.5a.75.75 0 0 0 0-1.5H3.628A2.25 2.25 0 0 1 5.75 9h6.5a.75.75 0 0 0 .73-.578l.846-3.595a.75.75 0 0 0-.578-.906 44.118 44.118 0 0 0-7.996-.91l-.348-1.436a.75.75 0 0 0-.73-.573H1.75ZM5 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="Manto">
+    <h5><strong>24 Departamentos</strong></h5>
+    <h2>Elije el que más te guste</h2>
+    <div class="search-container">
+      <input id="searchInput"       
+            type="text"
+            placeholder="Buscar destinos"
+            class="search-input">
+      <button id="searchBtn" class="search-button">🔍</button>
+    </div>
+  </div>
+  <section class="Cuerpo ">
+      <!-- ====================  CARRUSEL · Busqueda  ==================== -->
+
+      <!-- Carrusel dinámico de resultados -->
+      <section id="searchResultsSwiper"
+              class="destinos-carousel swiper search-swiper"
+              style="display:none;">           <!-- oculto por defecto -->
+        <h1 class="titulo-zona">Resultados</h1>
+
+        <div class="swiper-wrapper" id="searchResultsWrapper"></div>
+
+        <div class="swiper-button-prev search-prev"></div>
+        <div class="swiper-button-next search-next"></div>
+        <div class="swiper-pagination  search-pagination"></div>
+      </section>
+      <!-- Sección Sierra -->
+
+      <!-- ====================  CARRUSEL · SIERRA  ==================== -->
+      <section class="destinos-carousel swiper sierra-carousel">
+        <div class="sierra-texto">
+          <h2>La Sierra peruana</h2>
+          <p>
+            Cordilleras majestuosas, valles fértiles y una cultura andina viva que
+            late a más de tres mil metros de altura.
+          </p>
+        </div>
+
+          <div class="swiper-wrapper">
+              <!-- ▸ Cajamarca -->
+              <div class="swiper-slide">
+              <a href="Departamentos/CAJAMARCA.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Cajamarca.jpg" alt="Departamento de Cajamarca">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra Norte</p>
+                  <h4 class="case-title">Cajamarca</h4>
+                  <p class="case-text">Historia colonial y capital lechera del Perú.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Áncash (tarjeta de sierra, si prefieres) -->
+              <!-- comenta o elimina si ya la usas en Costa -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/ANCASH.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Áncash.jpg" alt="Departamento de Áncash">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra Norte</p>
+                  <h4 class="case-title">Áncash</h4>
+                  <p class="case-text">Cordillera Blanca y callejón de Huaylas imponentes.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Huánuco -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/HUANUCO.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Huánuco.jpg" alt="Departamento de Huánuco">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra & Selva Alta</p>
+                  <h4 class="case-title">Huánuco</h4>
+                  <p class="case-text">Clima templado perpetuo y puente entre sierra y amazonía.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Moquegua -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/MOQUEGUA.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Moquegua.jpg" alt="Departamento de Moquegua">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Sur</p>
+                  <h4 class="case-title">Moquegua</h4>
+                  <p class="case-text">Pisco, aceitunas y equilibrio entre mar y altiplano.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Pasco -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/PASCO.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Pasco.jpg" alt="Departamento de Pasco">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra Central</p>
+                  <h4 class="case-title">Pasco</h4>
+                  <p class="case-text">Minería centenaria y el famoso Cerro de Pasco.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Junín -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/JUNIN.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Junín.jpg" alt="Departamento de Junín">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra Central</p>
+                  <h4 class="case-title">Junín</h4>
+                  <p class="case-text">Valle del Mantaro y la extensa meseta del Bombón.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Huancavelica -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/HUANCAVELICA.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Huancavelica.jpg" alt="Departamento de Huancavelica">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra Centro-Sur</p>
+                  <h4 class="case-title">Huancavelica</h4>
+                  <p class="case-text">Paisajes agrestes y rica tradición textil.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Ayacucho -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/AYACUCHO.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Ayacucho.jpg" alt="Departamento de Ayacucho">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra Sur</p>
+                  <h4 class="case-title">Ayacucho</h4>
+                  <p class="case-text">Ciudad de las 33 iglesias y arte popular de retablos.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Apurímac -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/APURIMAC.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Apurímac.jpg" alt="Departamento de Apurímac">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra Sur</p>
+                  <h4 class="case-title">Apurímac</h4>
+                  <p class="case-text">Profundos cañones, puente Q’eswachaka y cultura viva.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Cusco (ya tenías varias tarjetas) -->
+              <div class="swiper-slide">
+              <a href="Departamentos/Cusco.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Cusco.jpg" alt="Departamento de Cusco">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Sierra Sur</p>
+                  <h4 class="case-title">Cusco</h4>
+                  <p class="case-text">Capital histórica del Tahuantinsuyo y legado inca.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Puno -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/PUNO.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Puno.jpg" alt="Departamento de Puno">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Altiplano</p>
+                  <h4 class="case-title">Puno</h4>
+                  <p class="case-text">Lago Titicaca y riqueza cultural de la nación aimara.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+          </div>
+
+          <div class="swiper-button-prev sierra-prev"></div>
+          <div class="swiper-button-next sierra-next"></div>
+          <div class="swiper-pagination sierra-pagination"></div>
+      </section>
+
+      
+    
+      <!-- ====================  CARRUSEL · SELVA  ==================== -->
+      <section class="destinos-carousel swiper selva-carousel">
+          <div class="sierra-texto">
+            <h2>La Selva peruana</h2>
+            <p>
+              Pulmón verde amazónico de ríos caudalosos y selva exuberante, hogar de una
+              biodiversidad incomparable y culturas que conviven en armonía con la
+              naturaleza.
+            </p>
+          </div>
+          <div class="swiper-wrapper">
+              <!-- ▸ Amazonas -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/AMAZONAS.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Selva/Amazonas.jpg" alt="Departamento de Amazonas">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Selva Alta</p>
+                  <h4 class="case-title">Amazonas</h4>
+                  <p class="case-text">Fortaleza de Kuélap y cascadas en la ceja de selva.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Loreto (si deseas otra tarjeta) -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/LORETO.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Selva/Loreto.jpg" alt="Departamento de Loreto">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Selva Baja</p>
+                  <h4 class="case-title">Loreto</h4>
+                  <p class="case-text">Gigante amazónico, pulmón verde y riqueza hidrobiológica.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ San Martín -->
+              <div class="swiper-slide">
+              <a href="Departamentos/SAN_MARTIN.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Selva/Moyobamba-San_Martin.jpg" alt="Departamento de San Martín">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Selva Alta</p>
+                  <h4 class="case-title">San Martín</h4>
+                  <p class="case-text">Aromático café y cataratas entre bosques nubosos.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Ucayali -->
+              <div class="swiper-slide">
+              <a href="#" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Sierra/Ucayali.jpg" alt="Departamento de Ucayali">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Selva Baja</p>
+                  <h4 class="case-title">Ucayali</h4>
+                  <p class="case-text">Capital de la ayahuasca y rutas fluviales amazónicas.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Madre de Dios (ya tenías Manu y Tambopata) -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/MADRE_DE_DIOS.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Selva/Tambopata-Madre_Dios.jpg" alt="Departamento de Madre de Dios">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Selva Baja</p>
+                  <h4 class="case-title">Madre de Dios</h4>
+                  <p class="case-text">Corazón de la biodiversidad amazónica del Perú.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+          </div>
+
+          <div class="swiper-button-prev selva-prev"></div>
+          <div class="swiper-button-next selva-next"></div>
+          <div class="swiper-pagination selva-pagination"></div>
+      </section>
+
+    
+      <!-- ====================  CARRUSEL · COSTA  ==================== -->
+      <section class="destinos-carousel swiper costa-carousel">
+          <div class="sierra-texto">
+            <h2>La Costa peruana</h2>
+            <p>
+              Franja bañada por el Pacífico donde desiertos, valles fértiles y ciudades
+              vibrantes se unen para impulsar la pesca, la agroexportación y la
+              gastronomía marina del país.
+            </p>
+          </div>
+
+          <div class="swiper-wrapper">
+              <!-- ▸ Tumbes -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/TUMBES.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Tumbes.jpg" alt="Departamento de Tumbes">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Norte</p>
+                  <h4 class="case-title">Tumbes</h4>
+                  <p class="case-text">Sol eterno, manglares y frontera norte del Perú.</p>
+                  <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Piura -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/PIURA.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Piura.jpg" alt="Departamento de Piura">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Norte</p>
+                  <h4 class="case-title">Piura</h4>
+                  <p class="case-text">Cuna del tondero, pesca artesanal y playas cálidas.</p>
+                  <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Lambayeque -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/LAMBAYEQUE.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Lambayeque.jpg" alt="Departamento de Lambayeque">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Norte</p>
+                  <h4 class="case-title">Lambayeque</h4>
+                  <p class="case-text">Reino Sicán, Señor de Sipán y gastronomía emblemática.</p>
+                  <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ La Libertad (ya tenías Chan-Chan) -->
+              <!-- duplica solo si deseas otra tarjeta; si no, elimina esta -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/LA_LIBERTAD.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/La-Lbertad.jpg" alt="Departamento de La Libertad">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Norte</p>
+                  <h4 class="case-title">La Libertad</h4>
+                  <p class="case-text">Historia Moche, marinera y próspera agroindustria.</p>
+                  <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Áncash (si quieres mantenerla en Costa) -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/ANCASH.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Áncash-Costa.jpg" alt="Departamento de Áncash">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa & Sierra</p>
+                  <h4 class="case-title">Áncash</h4>
+                  <p class="case-text">Pesca, minería y paisajes que unen mar y nevados.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Lima (capital incluida) -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/LIMA.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Lima.jpg" alt="Departamento de Lima">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Central</p>
+                  <h4 class="case-title">Lima</h4>
+                  <p class="case-text">Capital gastronómica, centro histórico y costa surfista.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Callao -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/CALLAO.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Callao.jpg" alt="Provincia Constitucional del Callao">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Central</p>
+                  <h4 class="case-title">Callao</h4>
+                  <p class="case-text">Primer puerto del país y rica tradición chalaca.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Ica (ya tenías varias postales) -->
+              <!-- Deja esta o tus anteriores tarjetas -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/ICA.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Ica.jpg" alt="Departamento de Ica">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Sur</p>
+                  <h4 class="case-title">Ica</h4>
+                  <p class="case-text">Viñedos de pisco, dunas y misterios de Nazca.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Arequipa -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/AREQUIPA.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Arequipa.jpg" alt="Departamento de Arequipa">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa & Sierra Sur</p>
+                  <h4 class="case-title">Arequipa</h4>
+                  <p class="case-text">“Ciudad Blanca”, volcán Misti y pujante economía.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Moquegua -->
+              <div class="swiper-slide">
+              <a href="#" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/ILO-Moquegua.jpg" alt="Departamento de Moquegua">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Sur</p>
+                  <h4 class="case-title">Moquegua</h4>
+                  <p class="case-text">Pisco, aceitunas y equilibrio entre mar y altiplano.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+
+              <!-- ▸ Tacna -->
+              <div class="swiper-slide">
+              <a href="/Departamentos/TACNA.html" class="case-card">
+                  <div class="case-image">
+                  <img src="/assets/Destinos/Costa/Tacna.jpg" alt="Departamento de Tacna">
+                  <span class="case-overlay"></span>
+                  </div>
+                  <div class="case-content">
+                  <p class="case-tag">Costa Sur</p>
+                  <h4 class="case-title">Tacna</h4>
+                  <p class="case-text">Heroica, fronteriza y de gran dinamismo comercial.</p>
+              <span class="case-arrow"><svg viewBox="0 0 11 11" width="11"><path d="M1 5.5h8.3l-3-3 1.2-1.2L11 5.5 7.5 9l-1.2-1.2 3-3H1z" fill="currentColor"/></svg></span>
+                  </div>
+              </a>
+              </div>
+          </div>
+
+          <div class="swiper-button-prev costa-prev"></div>
+          <div class="swiper-button-next costa-next"></div>
+          <div class="swiper-pagination costa-pagination"></div>
+      </section>
+
+  </section>
+  <footer>
+    <p>&copy; 2025 Explora el Mundo. Todos los derechos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/destinos.js"></script>
+  <script src="js/Buscador.js"></script>
+</body>
+   

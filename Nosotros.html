@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explora el Mundo - Turismo</title>
+  <link rel="shortcut icon" href="/build/logo (2).png " type="image/x-icon">
+  <link rel="stylesheet" href="/css/Destino2.css">
+  <link rel="stylesheet" href="css/destinos.css">
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <nav class="navbar">
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links">
+      <div class="Nombre"><p><b>Explora Perú</b></p></div>
+      <div class="Enlaces">
+        <a href="/Index.html">Inicio</a>
+        <a href="/Departamentos.html">Departamentos</a>
+        <a href="/Nosotros.html">Nosotros</a>
+        <a href="/Contactanos.html">Contáctanos</a>
+        <a href="/cart.html" class="cart-link">
+          <!-- svg carro idéntico -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+           <path d="M1.75 1.002a.75.75 0 1 0 0 1.5h1.835l1.24 5.113A3.752 3.752 0 0 0 2 11.25c0 .414.336.75.75.75h10.5a.75.75 0 0 0 0-1.5H3.628A2.25 2.25 0 0 1 5.75 9h6.5a.75.75 0 0 0 .73-.578l.846-3.595a.75.75 0 0 0-.578-.906 44.118 44.118 0 0 0-7.996-.91l-.348-1.436a.75.75 0 0 0-.73-.573H1.75ZM5 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+    <section class="encabezado" style="margin-top: 2rem;">
+      <div class="sobre-nosotros">
+          <h1><strong>Sobre Nosotros</strong></h1>
+          <p>En Explora Perú, somos una empresa apasionada por mostrar la riqueza cultural, histórica y natural de nuestro país. Nos especializamos en brindar experiencias turísticas auténticas, seguras y memorables, conectando a viajeros de todo el mundo con los destinos más emblemáticos y también con aquellos rincones poco conocidos que hacen del Perú un lugar único.</p>
+          <p>Ven y descubre el Perú con nosotros. Te mostraremos un país lleno de historia, sabores, paisajes y cultura que te sorprenderá en cada paso.</p>
+          <p>Gracias por confiar en nosotros y ser parte de nuestra historia.</p>
+      </div>
+    <img src="/assets/Abaut us/Machupichu.jpg" alt="">
+  </section>
+
+  <section class="destinos-section">
+    <h2><strong>Nuestras regiones</strong></h2>
+    <div class="destinos">
+      <!-- Costa -->
+      <div class="card">
+        <img src="/assets/costa.jpg" alt="Atardecer en la costa peruana">
+
+        <div class="card-content">
+          <!-- contenedor que girará -->
+          <div class="flipbox" id="costaCard">
+            <div class="flipbox__inner">
+
+              <!-- Cara A -->
+              <div class="flipbox__face flipbox__front">
+                <h3><strong>La Costa</strong></h3>
+                <p>
+                  Playas paradisíacas, impresionantes dunas doradas y una exquisita gastronomía marina te esperan en la Costa peruana. Vive la adrenalina surfeando en Máncora, explora misteriosos vestigios arqueológicos en Paracas y relájate con los atardeceres más espectaculares frente al Pacífico.
+                </p>
+              </div>
+
+
+              <!-- Cara B -->
+              <div class="flipbox__face flipbox__back">
+                <h3><strong>Datos interesantes</strong></h3>
+                <p>
+                  La costa peruana abarca el 10,7 % del territorio nacional y posee un extenso litoral de <strong>3 080 km</strong>, lleno de historia, biodiversidad y cultura.
+                </p>
+              </div>
+
+
+            </div>
+          </div>
+
+          <button class="flip-btn" data-card="costaCard">Más info</button>
+        </div>
+      </div>
+
+
+      <!-- Sierra -->
+      <div class="card">
+        <img src="/assets/Abaut us/sierra.png" alt="Vista panorámica de los Andes peruanos">
+
+        <div class="card-content">
+          <!-- contenedor que girará -->
+          <div class="flipbox" id="sierraCard">
+            <div class="flipbox__inner">
+
+              <!-- Cara A -->
+              <div class="flipbox__face flipbox__front">
+                <h3><strong>La Sierra</strong></h3>
+                <p>
+                  Aventúrate por los majestuosos Andes peruanos, hogar de maravillas como Machu Picchu, lagunas cristalinas y nevados imponentes. Sumérgete en la riqueza cultural de sus pueblos tradicionales, disfruta de la música andina, artesanías únicas y la calidez de su gente que te espera a más de 4,000 metros de altura.
+                </p>
+              </div>
+
+              <!-- Cara B -->
+              <div class="flipbox__face flipbox__back">
+                <h3><strong>Datos interesantes</strong></h3>
+                <p>
+                  La Sierra peruana comienza a partir de los <strong>500 m s. n. m.</strong> y es conocida por su diversidad cultural, arqueológica y sus impresionantes paisajes andinos.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="flip-btn" data-card="sierraCard">Más info</button>
+        </div>
+      </div>
+
+
+      <!-- Selva -->
+      <div class="card">
+        <img src="/assets/Abaut us/selva collage.webp" alt="Selva amazónica del Perú">
+
+        <div class="card-content">
+          <!-- contenedor que girará -->
+          <div class="flipbox" id="selvaCard">
+            <div class="flipbox__inner">
+
+              <!-- Cara A -->
+              <div class="flipbox__face flipbox__front">
+                <h3><strong>La Selva</strong></h3>
+                <p>
+                  Descubre la exuberante selva amazónica del Perú, un paraíso natural repleto de biodiversidad. Navega por el imponente río Amazonas, explora la Reserva del Manu o aventúrate en Tambopata. Vive experiencias únicas entre sabores exóticos y el encanto ancestral de sus comunidades nativas.
+                </p>
+              </div>
+
+              <!-- Cara B -->
+              <div class="flipbox__face flipbox__back">
+                <h3><strong>Datos interesantes</strong></h3>
+                <p>
+                  La Amazonía peruana, ubicada entre los trópicos de Cáncer y Capricornio, alberga una biodiversidad única en el planeta y cubre cerca del <strong>60%</strong> del territorio nacional.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <button class="flip-btn" data-card="selvaCard">Más info</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- <section>
+        <div class="destinos-flip">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <p><strong>Ubicación Geográfica</strong></p>
+              </div>
+              <div class="flip-card-back">
+                <p>Ocupa una extensión que representa el 10.7% de la superficie total de país, con un litoral de 3,080 kms.</p>
+              </div>
+            </div>        
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <p><strong>Ubicación Geográfica</strong></p>
+              </div>
+              <div class="flip-card-back">
+                <p>La Sierra ó zona Andina empieza por encima de los 500 metros sobre el nivel del mar (msnm).</p>
+              </div>
+            </div>        
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                 <p><strong>Ubicación Geográfica</strong></p>
+              </div>
+              <div class="flip-card-back">
+                Esta entre el Trópico de Cáncer (23° de latitud norte) y el Trópico de Capricornio (23° de latitud sur). 
+              </div>
+            </div>        
+          </div>
+        </div>  
+    </section> -->
+  </section>
+       
+  <section class="elegirnos">
+    <div class="elegirnos-text">
+      <h2><strong>¿Por qué elegirnos para conocer tu próximo destino?</strong></h2>
+      <p>Si estás buscando una experiencia auténtica, segura y llena de maravillas, has llegado al lugar correcto. En nuestra pagina, te brindamos informacion sobre el Perú. Desde las imponentes ruinas de Machu Picchu hasta los paisajes místicos del Valle Sagrado, te conectamos con la historia, la cultura y la magia de este destino único.</p>
+      <p>Contamos con informacion actualizada, itinerarios, actividades y un compromiso real con la calidad y el respeto por las comunidades locales. Nos apasiona lo que hacemos y queremos compartir contigo lo mejor de nuestro país.</p>
+      <p>El Perú te espera, nosotros te lo mostraremos.</p>
+    </div>
+    <div class="elegirnos-image">
+      <img src="assets/Abaut us/sierra.png" alt="">
+    </div>
+  </section>   
+  <!-- <section id="video">
+     <h2><strong>Aquí podras observar como es nuestro Perú</strong></h2>
+     <h4 style="text-align: center;">Nuestro Perú</h4>
+     <video autoplay muted controls>
+      <source src="/video/Perú, siempre más de lo que esperas - Turismo de Reuniones.mp4" type="video/mp4">
+     </video>
+  </section> -->
+
+  <footer>
+    <p>&copy; 2025 Explora el Mundo. Todos los derechos reservados.</p>
+  </footer>
+  <script src="/js/index.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,250 @@
+body { margin:0; font-family:Inter,Arial,Helvetica,sans-serif; background:#f2f4f7; }
+/* ========== PALETA Y VARIABLES ========== */
+:root{
+  --clr-bg-card:   #ffffff;
+  --clr-title:     #1f2937;
+  --clr-text:      #475569;
+  --clr-tag:       #0f766e;
+  --clr-accent:    #0f766e;
+  --clr-muted:     #e5e7eb;
+  --shadow:        0 6px 12px rgba(0,0,0,.12);
+  --radius:        1rem;
+}
+
+/* ========== REJILLA 3 COLS (auto-responsive) ========== */
+.cards-3{
+  display:grid;
+  gap:1.25rem;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+}
+
+/* ========== TARJETA BASE ========== */
+.card{
+  position:relative;
+  background:var(--clr-bg-card);
+  border:1px solid var(--clr-muted);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:1.25rem;
+  text-align:center;
+  display:flex;flex-direction:column;gap:.75rem;
+  transition:transform .25s, box-shadow .25s;
+  cursor:pointer;
+}
+.card:hover{ transform:translateY(-4px); box-shadow:0 10px 18px rgba(0,0,0,.16); }
+.card img{width:48px;height:48px;object-fit:contain;margin-inline:auto;}
+.card p{margin:0;font-weight:600;color:var(--clr-title);}
+.card .precio{font-size:.85rem;color:var(--clr-tag);}
+
+/* ========== ESTADO: SELECCIONADA ========== */
+.card.selected{
+  background:linear-gradient(135deg,#ecfdf5 0%,#d1fae5 100%);
+  border-color:var(--clr-accent);
+}
+.card.selected::after{
+  content:'✔';
+  position:absolute;top:8px;right:8px;
+  width:24px;height:24px;
+  background:var(--clr-accent);color:#fff;
+  border-radius:50%;font-size:1.1rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  animation:pop .3s ease;
+}
+@keyframes pop{0%{transform:scale(0);}80%{transform:scale(1.2);}100%{transform:scale(1);}}
+
+/* ========== ESTADO: DESHABILITADA ========== */
+.card.disabled{
+  opacity:.35;filter:grayscale(50%);pointer-events:none;
+}
+
+/* ========== BARRA DE PROGRESO (actividades) ========== */
+.progress{width:100%;height:8px;background:#f1f5f9;border-radius:4px;margin:.5rem 0 1rem}
+#progressBar{height:100%;width:0;background:var(--clr-accent);border-radius:4px;transition:width .3s}
+
+/* ========== BOTÓN FLOTANTE ========== */
+.btn-add-float{
+  position:fixed;right:4.2rem;bottom:1rem;z-index:900;
+  padding:.9rem 1.8rem;border:none;border-radius:1.2rem;
+  font-weight:700;font-size:.95rem;cursor:pointer;
+  background:var(--clr-accent);color:#fff;opacity:.5;transition:.25s;
+}
+.btn-add-float.enabled{opacity:1;}
+.btn-add-float:disabled{cursor:not-allowed;}
+
+/* ========== BADGE FLOTANTE (total global) ========== */
+.floating-cart{
+  position:fixed;right:1rem;bottom:1rem;z-index:901;
+  width:52px;height:52px;border-radius:50%;
+  background:var(--clr-accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow);
+}
+.floating-cart svg{width:24px;height:24px}
+.floating-cart span{
+  position:absolute;top:-6px;right:-6px;
+  width:22px;height:22px;border-radius:50%;
+  background:#ef4444;color:#fff;font-weight:700;font-size:.75rem;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ========== TOASTS ========== */
+#toastContainer{position:fixed;top:1rem;right:1rem;z-index:1000;display:flex;flex-direction:column;gap:.5rem}
+.toast{
+  background:var(--clr-title);color:#fff;font-size:.85rem;
+  padding:.75rem 1rem;border-radius:.75rem;box-shadow:var(--shadow);
+  animation:fadeIn .3s ease,fadeOut .3s ease 3.2s forwards;
+}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px);}to{opacity:1;}}
+@keyframes fadeOut{to{opacity:0;transform:translateY(-6px);}}
+
+/* ========== PERSONALIZAR VIAJE (persons + cities) ========== */
+.custom{margin-top:3rem;padding:1.5rem;border:1px solid var(--clr-muted);border-radius:var(--radius);}
+.custom h2{margin:0 0 1rem;font-size:1.4rem;font-weight:700;color:var(--clr-title);}
+.field{display:block;margin:.9rem 0;color:var(--clr-text);font-size:.9rem}
+.field input[type=number]{width:90px;padding:.35rem .5rem;margin-left:.6rem;border:1px solid var(--clr-muted);border-radius:.5rem}
+fieldset.field{border:1px solid var(--clr-muted);border-radius:.75rem;padding:1rem}
+fieldset label{display:block;margin:.35rem 0}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:640px){
+  .btn-add-float{right:1rem}
+  .swiper-button-prev,.swiper-button-next{display:none !important;}
+}
+/* —— Paso/Sección del wizard —— */
+.wizard .step{margin:1.5rem 0}
+.wizard .step[data-disabled]{opacity:.35;pointer-events:none}
+.field .lbl{display:block;margin-bottom:.4rem;font-weight:600}
+.btn-next{
+  margin-top:.8rem;padding:.6rem 1.4rem;
+  background:var(--clr-accent);color:#fff;border:none;border-radius:.75rem;
+  font-weight:600;cursor:pointer;opacity:.6;transition:.2s;
+}
+.btn-next.enabled{opacity:1;}
+/* ───── Botón “Reserva ya” ───── */
+.btn-reserve{
+  display:inline-block;margin:2rem auto;
+  padding:1rem 2.2rem;border:none;border-radius:1.2rem;
+  font-weight:700;font-size:1rem;cursor:pointer;
+  background:var(--clr-accent);color:#fff;
+  box-shadow:0 6px 12px rgba(0,0,0,.15);
+  transition:transform .25s;
+  position: fixed;
+  right:1.25rem;               /* distancia al borde izquierdo   */
+  bottom:1.25rem;             /* distancia al borde inferior    */
+
+  /* anula cualquier valor heredado */
+  left:auto;                 /* por si antes había right:…     */
+  margin:0;     
+}
+.btn-reserve:hover{transform:translateY(-3px);}
+
+/* ───── Dialog base ───── */
+/* dialog contenedor */
+.reserve-modal{
+  width:min(92vw, 860px);
+  max-height:90vh;
+  padding:0;                 /* sin padding global */
+  border:none;border-radius:1.5rem;
+}
+.reserve-modal[open]{
+  display:flex;                     /* ahora sí */
+  flex-direction:column;
+  animation:popup .35s ease;
+}
+
+/* scroll solo sobre el cuerpo, no sobre cabecera/botones */
+.reserve-modal article.content{
+  padding:1.25rem 1.75rem;   /* margen interno uniforme */
+  overflow-y:auto;
+  flex:1;                    /* ocupa todo y permite scroll */
+}
+
+@keyframes popup{
+  from{transform:translateY(30px) scale(.9);opacity:0}
+  to  {transform:translateY(0)     scale(1);opacity:1}
+}
+
+/* Backdrop */
+::backdrop{
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(2px);
+}
+
+/* Cierre (X) */
+.modal-close{
+  position:absolute;top:1rem;right:1rem;
+  background:none;border:none;font-size:1.8rem;line-height:1;
+  color:#64748b;cursor:pointer;
+}
+.modal-close:hover{color:#1f2937}
+
+/* Ajuste del botón flotante y badge dentro del dialog */
+/* coloca dentro y evita tapar inputs */
+.reserve-modal .btn-add-float{
+  position:absolute;         /* ya no fixed */
+  right:clamp(1rem,4vw,5rem);
+  bottom:clamp(1rem,4vw,1.5rem);
+}
+.reserve-modal .floating-cart{
+  position:absolute;
+  right:clamp(1rem,4vw,1.5rem);
+  bottom:clamp(1rem,4vw,1.5rem);
+}
+
+/* ─────────  STEP-PER (±)  ───────── */
+.persons-field .stepper{
+  display:inline-flex;align-items:center;
+  gap:.45rem;flex-wrap:nowrap;
+  background:#f3f4f6;border-radius:1.1rem;padding:.35rem .55rem;
+}
+.persons-field input{width:56px;min-width:56px}   /* ancho fijo */
+
+.stepper-btn{
+  width:36px;height:36px;border:none;border-radius:50%;
+  background:#e2e8f0;color:#1f2937;font-size:1.4rem;font-weight:700;
+  line-height:1;cursor:pointer;transition:.2s;
+}
+.stepper-btn:hover{background:#cbd5e1}
+.persons-field input{
+  width:52px;text-align:center;border:none;background:transparent;
+  font-size:1rem;font-weight:600;padding:0;
+}
+article.content section + section{margin-top:2rem}
+@media(max-width:640px){
+  article.content section + section{margin-top:1.4rem}
+}
+
+ #map { height: 100vh; width: 100%; }
+
+  /*  Etiqueta por defecto (todos los departamentos)  */
+  .label-base      { color:#bbbbbb; font-weight:700; background:none; border:none; box-shadow:none; pointer-events:none; }
+  /* Nombre del departamento seleccionado */
+  .label-highlight { color:#ffffff; }
+
+
+  .step-indicator{display:flex;gap:.5rem;justify-content:center;margin:0 0 1rem;padding:0;list-style:none;font-size:.8rem;font-weight:600}
+.step-indicator li{padding:.4rem .8rem;border-radius:1rem;background:#e5e7eb;color:#6b7280}
+.step-indicator li.active{background:#0f766e;color:#fff}
+.wizard-nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-top:1px solid #e5e7eb}
+.wizard-nav button{background:#0f766e;color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.3rem;cursor:pointer;transition:.25s}
+.wizard-nav button[disabled]{opacity:.35;cursor:not-allowed}
+dialog.reserve-modal article.content{height:480px;overflow-y:auto} /* altura fija */
+/* Todas ocultas por defecto… */
+.tarjeta-1,
+.tarjeta-2,
+.tarjeta-3 { display:none; }
+
+/* …excepto la primera al cargar la página */
+body.wizard-step-1 .tarjeta-1 { display:block; }
+body.wizard-step-2 .tarjeta-2 { display:block; }
+body.wizard-step-3 .tarjeta-3 { display:block; }
+
+/* Oculta el botón Añadir en los pasos 1-2 y oculta la flecha en el paso 3 */
+#wizardAdd,       /* alias opcional */
+#addToCart        { display:none; }                     /* por defecto */
+body.wizard-step-3 #addToCart { display:inline-block; } /* solo paso 3 */
+body.wizard-step-3 #stepNext  { display:none; }         /* oculta flecha */
+
+/* (si tu antiguo .btn-add-float tenía estilos, cámbiale la clase o
+   ponlos aquí; ya no necesitas “posición fixed” porque el botón
+   vive dentro de .wizard-nav) */

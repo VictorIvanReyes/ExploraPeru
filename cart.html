@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras | Explora Perú</title>
+
+  <link rel="stylesheet" href="/css/globalDepar.css"><!-- usa tu hoja base -->
+  <link rel="stylesheet" href="/css/Destino2.css">
+  <link rel="stylesheet" href="/css/Carrito.css">
+
+</head>
+<body>
+
+<nav class="navbar">
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links">
+      <div class="Nombre"><p><b>Explora Perú</b></p></div>
+      <div class="Enlaces">
+        <a href="/Index.html">Inicio</a>
+        <a href="/Departamentos.html">Departamentos</a>
+        <a href="/Nosotros.html">Nosotros</a>
+        <a href="/Contactanos.html">Contáctanos</a>
+        <a href="/cart.html" class="cart-link">
+          <!-- svg carro idéntico -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+           <path d="M1.75 1.002a.75.75 0 1 0 0 1.5h1.835l1.24 5.113A3.752 3.752 0 0 0 2 11.25c0 .414.336.75.75.75h10.5a.75.75 0 0 0 0-1.5H3.628A2.25 2.25 0 0 1 5.75 9h6.5a.75.75 0 0 0 .73-.578l.846-3.595a.75.75 0 0 0-.578-.906 44.118 44.118 0 0 0-7.996-.91l-.348-1.436a.75.75 0 0 0-.73-.573H1.75ZM5 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM13 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+<main class="wrapper">
+  <h1>Carrito de Compras</h1>
+
+  <table class="cart-table" id="cartTable">
+    <thead>
+      <tr>
+        <th>Artículo</th>
+        <th>Detalles</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <section class="resumen">
+    <h2>Resumen</h2>
+    <p><span>Subtotal</span><span id="subTotal">—</span></p>
+    <p><span>Impuestos y Tarifas</span><span id="taxes">—</span></p>
+    <p><strong>Total</strong><strong id="grandTotal">—</strong></p>
+
+    <div class="btn-row">
+      <button class="btn btn-primary">Proceder a la Reserva</button>
+      <a href="/" class="btn btn-secondary">Continuar Comprando</a>
+    </div>
+  </section>
+</main>
+
+<script src="/js/Carrito.js"></script>
+
+
+</body>
+</html>
