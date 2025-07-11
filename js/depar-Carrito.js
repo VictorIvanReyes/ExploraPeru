@@ -83,8 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
       card.dataset.price = a.price;
       card.dataset.city  = city;
       card.innerHTML = `
-        <img src="/assets/icons/act-${a.img}.svg" alt="">
-        <p>${a.label}</p><span class="precio">S/ ${a.price}</span>
+        <div style="Height: 50px">
+          <p>${a.label}</p><span class="precio">S/ ${a.price}</span>
+        </div>
       `;
       if (selectedActs[a.id]) card.classList.add('selected');
       card.addEventListener('click', () => handleActivity(card));
